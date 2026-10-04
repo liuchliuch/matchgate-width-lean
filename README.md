@@ -17,7 +17,7 @@ The project pins Lean **4.34.1**, Mathlib commit `d13f23b723b8a846827a245b89c10f
 
 ## Review the statements
 
-Start with [PaperStatements.lean](PaperStatements.lean). It contains 41 explicit proposition contracts with their hypotheses and quantifiers. [PaperProofs.lean](PaperProofs.lean) provides proofs of exactly those contracts. [PaperChallenge.lean](PaperChallenge.lean) is the separate trusted challenge for the official [Lean Comparator](https://github.com/leanprover/comparator).
+Start with [PaperStatements.lean](PaperStatements.lean), which states 41 propositions with their hypotheses and quantifiers written out explicitly. [PaperProofs.lean](PaperProofs.lean) supplies the corresponding proofs. [PaperChallenge.lean](PaperChallenge.lean) presents the same goals to the official [Lean Comparator](https://github.com/leanprover/comparator).
 
 The challenge's intentional `sorry` placeholders are never imported by the proof library. There are no proof placeholders or project mathematical axioms in the solution. The proof audit permits only `propext`, `Classical.choice` and `Quot.sound` transitively.
 
@@ -25,7 +25,7 @@ The challenge's intentional `sorry` placeholders are never imported by the proof
 - [Model conventions](docs/model-conventions.md): ordered planar graphs, external port order, labelled equivalence, coefficient fields and width zero.
 - [Verification](docs/verification.md): full compilation, axiom auditing, kernel replay and Comparator commands.
 
-Statement contracts share reviewed mathematical definitions with the library. Review those definitions together with the statements; neither Comparator nor a successful build can establish the meaning of an English theorem automatically.
+The statement interfaces use the library's mathematical definitions. The correspondence and model documents explain how those definitions and hypotheses express the paper's claims.
 
 ## Full verification
 
@@ -35,9 +35,9 @@ With Python 3.11 or later:
 python3 scripts/verify.py --clean
 ```
 
-This rebuilds project artifacts, audits declarations by actual originating module (including private helpers), runs arithmetic/order regressions, and replays every mathematical module with the same pinned Lean kernel. Dependency build artifacts are reused. It is not an independent kernel implementation.
+This rebuilds the project, audits all project declarations, runs arithmetic and ordering regressions, and rechecks every mathematical module with the pinned Lean kernel. Dependency caches are reused. See the [verification instructions](docs/verification.md) to include the official Comparator's 41 statement checks.
 
-The compact release receipt is [Verification/result.json](Verification/result.json). Its source digest identifies the checked mathematical inputs; local logs are under the ignored `.lake/verification/` directory. The release Comparator run uses trusted local mode on macOS, without a build sandbox or an external kernel. The upstream sandboxed mode is documented separately.
+The [verification record](Verification/result.json) identifies the checked inputs and completed checks. Generated logs stay under `.lake/verification/`. The [verification documentation](docs/verification.md) describes the checking methods, local and sandboxed execution modes, and kernel used.
 
 ## Layout
 
