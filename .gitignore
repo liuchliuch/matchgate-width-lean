@@ -1,0 +1,13 @@
+.lake/
+.tooling/
+*.olean
+*.ilean
+*.trace
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+__pycache__/
+.DS_Store
+*.zip

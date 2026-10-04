@@ -1,0 +1,10 @@
+Matchgate Width Lean Formalization
+
+Verification/Replay.lean adapts Lean 4.34.1 src/lean/LeanChecker.lean.
+Copyright (c) 2023 Kim Morrison. All rights reserved.
+Authors: Kim Morrison, Sebastian Ullrich.
+Released under the Apache License, Version 2.0; see LICENSE.
+
+The paper source in paper/ITCS-arxiv.tex is the authors' arXiv:2610.00079v1
+submission. Its arXiv distribution terms are independent of this code license.
+Lean, Mathlib and Comparator are obtained separately under their upstream licenses.

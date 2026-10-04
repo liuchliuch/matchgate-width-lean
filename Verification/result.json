@@ -1,0 +1,25 @@
+{
+  "status": "pass",
+  "checked_at_utc": "2026-10-04T06:43:35.783020+00:00",
+  "lean_toolchain": "leanprover/lean4:v4.34.1",
+  "source_digest_sha256": "98e58dd05cd7ebe904d76c5e1633e414a99b19273a52bbb0db246f7324e97272",
+  "mathematical_modules": 275,
+  "audited_declarations": 7627,
+  "paper_statement_contracts": 41,
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "clean_project_build": true,
+  "kernel_replay": "same Lean kernel",
+  "nonfatal_build_warnings": 97,
+  "clean_pinned_dependencies": 9,
+  "dependencies": "pinned dependency build artifacts reused",
+  "comparator": {
+    "status": "pass",
+    "statement_contracts": 41,
+    "build_sandbox": false,
+    "external_kernel": false
+  }
+}
